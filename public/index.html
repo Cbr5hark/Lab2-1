@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Ввід даних студентів університету</title>
+</head>
+<body>
+
+<h1>Ввід даних студентів університету</h1>
+
+<form id="studentForm">
+    <label for="firstname">Введіть ім'я: </label><br>
+    <input type="text" id="firstname"><br><br>
+
+    <label for="lastname">Введіть прізвище: </label><br>
+    <input type="text" id="lastname"><br><br>
+
+    <label for="phone">Введіть номер телефону:</label><br>
+    <input type="text" id="phone"><br><br>
+
+    <label for="email">Введіть електронну пошту: </label><br>
+    <input type="text" id="email"><br><br>
+
+    <label for="groups">Оберіть групу</label>
+    <select id="groups" name="groups">
+        <option value="Б-121-22-1-ПІ">Б-121-22-1-ПІ</option>
+        <option value="Б-121-22-2-ПІ">Б-121-22-2-ПІ</option>
+        <option value="Б-121-22-3-ПІ">Б-121-22-3-ПІ</option>
+        <option value="Б-121-22-4-ПІ">Б-121-22-4-ПІ</option>
+        <option value="Б-121-22-5-ПІ">Б-121-22-5-ПІ</option>
+    </select><br><br>
+
+    <label for="sex">Оберіть стать:</label><br>
+    <input type="radio" name="sex" value="Чоловіча"> Чоловіча<br>
+    <input type="radio" name="sex" value="Жіноча"> Жіноча<br><br>
+
+    <input type="submit" value="Відправити">
+    <input type="reset" value="Скинути">
+</form>
+
+<h2>Збережені записи:</h2>
+<ul id="studentList"></ul>
+
+<button onclick="saveToFile('json')">Завантажити JSON</button>
+<button onclick="saveToFile('xml')">Завантажити XML</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
